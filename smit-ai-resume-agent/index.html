@@ -173,7 +173,11 @@
     function el(id) { return document.getElementById(id); }
     function esc(s) {
       return String(s || "").replace(/[&<>"']/g, function (c) {
-        return ({ "&": "&", "<": "<", ">": ">", '"': """, "'": "&#39;" })[c];
+        if (c === "&") return "\u0026amp;";
+        if (c === "<") return "\u0026lt;";
+        if (c === ">") return "\u0026gt;";
+        if (c === '"') return "\u0026quot;";
+        return "\u0026#39;";
       });
     }
     function lines(t) {
