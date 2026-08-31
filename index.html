@@ -1,205 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AlgoLex Solutions | Prof. Mukesh Kumar — Quantum AI, Education & Legal</title>
-    <meta name="description" content="Prof. Mukesh Kumar — B.Tech, M.Tech, LLB, PhD (pursuing) Quantum AI. 15 years in computer science and AI education. Founder of AlgoLex Solutions, Chennai.">
-    <link rel="canonical" href="https://algolex.in/">
-    <link rel="icon" href="logo.svg" type="image/svg+xml">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap');
-        body { font-family: Inter, system-ui, sans-serif; }
-        .font-serif { font-family: "Instrument Serif", Georgia, serif; }
-        .nav-link:hover { color: #2563eb; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AlgoLex — AI. Quantum Intelligence. Education.</title>
+  <meta name="description" content="AlgoLex builds intelligent solutions at the intersection of Artificial Intelligence, Quantum Computing, Education and Research. Founded by Prof. Mukesh Kumar, Chennai.">
+  <link rel="canonical" href="https://www.algolex.in/">
+  <meta property="og:title" content="AlgoLex — AI. Quantum Intelligence. Education.">
+  <meta property="og:description" content="AlgoLex builds intelligent solutions at the intersection of Artificial Intelligence, Quantum Computing, Education and Research. Founded by Prof. Mukesh Kumar, Chennai.">
+  <meta property="og:url" content="https://www.algolex.in/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://www.algolex.in/logo.svg">
+  <link rel="icon" href="logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-[#f6f4ef] text-slate-800 antialiased">
-    <nav class="sticky top-0 z-50 bg-[#f6f4ef]/90 backdrop-blur border-b border-stone-200/80">
-        <div class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
-            <a href="/" class="flex items-center gap-2.5">
-                <img src="logo.svg" alt="AlgoLex" class="w-8 h-8 rounded-lg">
-                <span class="font-semibold tracking-tight">AlgoLex</span>
-            </a>
-            <div class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-600">
-                <a href="services.html" class="nav-link">Services</a>
-                <a href="courses.html" class="nav-link">Courses</a>
-                <a href="quantum-ai.html" class="nav-link">Quantum AI</a>
-            </div>
-            <div class="flex items-center gap-2">
-                <button onclick="showContactModal()" class="hidden sm:inline-flex px-4 py-2 text-sm font-semibold rounded-full bg-slate-900 text-white hover:bg-slate-800">Book a call</button>
-                <button id="mobile-menu-btn" class="md:hidden w-10 h-10 rounded-lg hover:bg-stone-200"><i class="fa-solid fa-bars"></i></button>
-            </div>
-        </div>
-        <div id="mobile-menu" class="hidden md:hidden border-t bg-[#f6f4ef] px-5 py-4 space-y-3 text-sm font-medium">
-            <a href="services.html" class="block py-1">Services</a>
-            <a href="courses.html" class="block py-1">Courses</a>
-            <a href="quantum-ai.html" class="block py-1">Quantum AI</a>
-            <button onclick="showContactModal()" class="w-full py-2.5 rounded-full bg-slate-900 text-white">Book a call</button>
-        </div>
+<body>
+<header class="site-header">
+  <div class="wrap nav-row">
+    <a class="brand" href="index.html"><img src="logo.svg" alt="AlgoLex"> AlgoLex</a>
+    <nav class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="ai-solutions.html">AI Solutions</a>
+      <a href="quantum-ai.html">Quantum AI</a>
+      <a href="education.html">Education</a>
+      <a href="research.html">Research</a>
+      <a href="insights.html">Insights</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
     </nav>
-    <section class="max-w-6xl mx-auto px-5 pt-12 pb-16 md:pt-20 md:pb-24">
-        <div class="grid lg:grid-cols-12 gap-10 items-center">
-            <div class="lg:col-span-7">
-                <p class="text-xs font-semibold tracking-[0.18em] uppercase text-blue-700 mb-4">Chennai · SMIT CSE · AlgoLex</p>
-                <h1 class="font-serif text-5xl md:text-[3.6rem] leading-[1.05] text-slate-900">Quantum AI research.<br>Placement-ready students.<br><em class="text-blue-800">One professor.</em></h1>
-                <p class="mt-6 max-w-xl text-lg text-slate-600 leading-relaxed">Prof. Mukesh Kumar — B.Tech, M.Tech, LLB, PhD (pursuing) Quantum AI. 15 years in computer science and AI education. Founder of AlgoLex Solutions.</p>
-                <div class="mt-8 flex flex-wrap gap-3">
-                    <button onclick="showContactModal()" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-blue-700 text-white font-semibold hover:bg-blue-800">Talk to Professor</button>
-                    <a href="courses.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-slate-300 font-semibold hover:bg-white">View courses</a>
-                </div>
-            </div>
-            <div class="lg:col-span-5">
-                <div class="relative max-w-sm mx-auto lg:ml-auto">
-                    <div class="absolute -inset-3 bg-blue-700/10 rounded-[2rem]"></div>
-                    <img src="founder-studio.png" alt="Mukesh Kumar, Founder of AlgoLex Solutions" class="relative w-full aspect-[4/5] object-cover object-[center_20%] rounded-[1.6rem] bg-slate-200 shadow-xl">
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="border-y border-stone-200 bg-white">
-        <div class="max-w-6xl mx-auto px-5 py-8 grid sm:grid-cols-3 gap-6 text-center sm:text-left">
-            <div><div class="text-sm font-semibold text-slate-900">SMIT CSE</div><div class="text-sm text-slate-500 mt-1">Professor, classroom + lab</div></div>
-            <div><div class="text-sm font-semibold text-slate-900">Quantum AI PhD</div><div class="text-sm text-slate-500 mt-1">Research in progress</div></div>
-            <div><div class="text-sm font-semibold text-slate-900">15 years</div><div class="text-sm text-slate-500 mt-1">Teaching and mentoring</div></div>
-        </div>
-    </section>
-    <section class="max-w-6xl mx-auto px-5 py-20">
-        <p class="text-xs font-semibold tracking-[0.18em] uppercase text-blue-700">Choose a path</p>
-        <h2 class="font-serif text-4xl mt-2 text-slate-900">Who you are. What you need.</h2>
-        <div class="mt-10 grid md:grid-cols-3 gap-5">
-            <a href="courses.html" class="group bg-white border border-stone-200 rounded-3xl p-7 hover:border-blue-300 hover:shadow-lg transition">
-                <p class="text-xs font-semibold uppercase tracking-wider text-blue-700">Students</p>
-                <h3 class="mt-3 text-2xl font-semibold tracking-tight">JEE, GATE, boards, CSE</h3>
-                <p class="mt-3 text-slate-600 leading-relaxed">Coaching for exams and campus placement, with personal guidance from a working professor.</p>
-                <p class="mt-6 text-sm font-semibold text-blue-700 group-hover:underline">Browse courses</p>
-            </a>
-            <a href="quantum-ai.html" class="group bg-white border border-stone-200 rounded-3xl p-7 hover:border-blue-300 hover:shadow-lg transition">
-                <p class="text-xs font-semibold uppercase tracking-wider text-blue-700">Researchers</p>
-                <h3 class="mt-3 text-2xl font-semibold tracking-tight">Quantum AI</h3>
-                <p class="mt-3 text-slate-600 leading-relaxed">Quantum ML, automation, and research collaboration with a working professor.</p>
-                <p class="mt-6 text-sm font-semibold text-blue-700 group-hover:underline">See research</p>
-            </a>
-            <a href="services.html" class="group bg-white border border-stone-200 rounded-3xl p-7 hover:border-blue-300 hover:shadow-lg transition">
-                <p class="text-xs font-semibold uppercase tracking-wider text-blue-700">Founders</p>
-                <h3 class="mt-3 text-2xl font-semibold tracking-tight">AI + legal</h3>
-                <p class="mt-3 text-slate-600 leading-relaxed">Contracts, IP, and AI systems for teams that need both technology and counsel.</p>
-                <p class="mt-6 text-sm font-semibold text-blue-700 group-hover:underline">View services</p>
-            </a>
-        </div>
-    </section>
-    <section class="bg-white border-y border-stone-200">
-        <div class="max-w-6xl mx-auto px-5 py-20">
-            <p class="text-xs font-semibold tracking-[0.18em] uppercase text-blue-700">Founder</p>
-            <h2 class="font-serif text-4xl mt-2 text-slate-900">Mukesh Kumar</h2>
-            <p class="mt-1 text-slate-500">Founder of AlgoLex Solutions · Professor of Computer Science, SMIT</p>
-            <div class="mt-8 grid md:grid-cols-2 gap-4">
-                <figure>
-                    <img src="founder-studio.png" alt="Mukesh Kumar, Founder of AlgoLex Solutions" class="w-full aspect-[4/3] object-cover object-[center_18%] rounded-3xl bg-slate-200">
-                    <figcaption class="mt-2 text-sm text-slate-500">Mukesh Kumar — Founder, AlgoLex Solutions</figcaption>
-                </figure>
-                <figure>
-                    <img src="founder-campus.jpg" alt="Mukesh Kumar at an academic session" class="w-full aspect-[4/3] object-cover object-[center_35%] rounded-3xl bg-slate-200">
-                    <figcaption class="mt-2 text-sm text-slate-500">At campus and academic programmes</figcaption>
-                </figure>
-            </div>
-            <div class="mt-8 max-w-3xl text-slate-600 leading-relaxed space-y-4">
-                <p>I am <strong>Mukesh Kumar</strong>, founder of AlgoLex Solutions and a Professor of Computer Science at Sri Muthukumaran Institute of Technology, Chennai.</p>
-                <p>My qualifications are <strong>B.Tech</strong>, <strong>M.Tech</strong> and <strong>LLB</strong>. I am pursuing a <strong>PhD in Quantum AI</strong>, with work across artificial intelligence, Quantum Machine Learning, teaching and legal strategy.</p>
-                <p>I have <strong>15 years of experience</strong> in computer science and AI education — mentoring engineering students, competitive-exam aspirants and research learners. AlgoLex is built around that desk: education, AI and counsel from Chennai.</p>
-            </div>
-            <div class="mt-6 flex flex-wrap gap-2 text-sm">
-                <span class="px-3 py-1.5 rounded-full bg-stone-100">B.Tech</span>
-                <span class="px-3 py-1.5 rounded-full bg-stone-100">M.Tech</span>
-                <span class="px-3 py-1.5 rounded-full bg-stone-100">LLB</span>
-                <span class="px-3 py-1.5 rounded-full bg-stone-100">PhD (pursuing) Quantum AI</span>
-                <span class="px-3 py-1.5 rounded-full bg-stone-100">AI</span>
-                <span class="px-3 py-1.5 rounded-full bg-stone-100">15 years’ experience</span>
-                <span class="px-3 py-1.5 rounded-full bg-stone-100">CSE @ SMIT</span>
-            </div>
-        </div>
-    </section>
-    <section class="max-w-6xl mx-auto px-5 py-20">
-        <div class="max-w-2xl">
-            <h2 class="font-serif text-4xl text-slate-900">Start with a conversation.</h2>
-            <p class="mt-4 text-slate-600 text-lg">Students, parents, and founders — same number. Reply usually within a day.</p>
-            <div class="mt-8 flex flex-wrap gap-3">
-                <button onclick="showContactModal()" class="px-6 py-3 rounded-full bg-green-600 text-white font-semibold hover:bg-green-700"><i class="fa-brands fa-whatsapp mr-2"></i>WhatsApp</button>
-                <a href="tel:+918072940943" class="px-6 py-3 rounded-full border border-slate-300 font-semibold hover:bg-white">+91 80729 40943</a>
-            </div>
-        </div>
-    </section>
-    <footer class="bg-slate-900 text-slate-400 text-sm px-5 pt-14 pb-8">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-10 pb-10 border-b border-white/10">
-            <div>
-                <div class="flex items-center gap-2.5 mb-3">
-                    <img src="logo.svg" alt="AlgoLex" class="w-8 h-8 rounded-lg">
-                    <div class="text-white font-semibold text-lg">AlgoLex Solutions</div>
-                </div>
-                <p class="mt-3 max-w-xs">Quantum AI, education, and legal strategy from Chennai.</p>
-            </div>
-            <div class="space-y-2">
-                <a href="services.html" class="block hover:text-white">Services</a>
-                <a href="courses.html" class="block hover:text-white">Courses</a>
-                <a href="quantum-ai.html" class="block hover:text-white">Quantum AI</a>
-            </div>
-            <div class="space-y-2">
-                <a href="mailto:kmukesh1@gmail.com" class="block hover:text-white">kmukesh1@gmail.com</a>
-                <a href="tel:+918072940943" class="block hover:text-white">+91 80729 40943</a>
-                <div>Ambattur, Tamil Nadu</div>
-            </div>
-        </div>
-        <div class="max-w-6xl mx-auto pt-6 text-xs">© 2026 AlgoLex Solutions</div>
-    </footer>
-    <div id="contact-modal" class="hidden fixed inset-0 bg-black/60 z-[100] items-center justify-center p-4">
-        <div class="bg-white rounded-3xl max-w-lg w-full p-7 shadow-2xl">
-            <div class="flex justify-between items-start mb-5">
-                <div>
-                    <h3 class="text-2xl font-semibold tracking-tight">Book a consultation</h3>
-                    <p class="text-slate-500 text-sm mt-1">Opens WhatsApp with your message</p>
-                </div>
-                <button onclick="hideContactModal()" class="text-2xl text-slate-400">&times;</button>
-            </div>
-            <div class="space-y-4">
-                <div><label class="block text-sm font-medium mb-1">Full name</label><input type="text" id="wa-name" class="w-full border border-slate-300 rounded-2xl px-4 py-3" placeholder="Your name"></div>
-                <div><label class="block text-sm font-medium mb-1">Email (optional)</label><input type="email" id="wa-email" class="w-full border border-slate-300 rounded-2xl px-4 py-3" placeholder="you@example.com"></div>
-                <div><label class="block text-sm font-medium mb-1">I am interested in</label>
-                    <select id="wa-interest" class="w-full border border-slate-300 rounded-2xl px-4 py-3">
-                        <option>JEE or NEET Coaching</option>
-                        <option>IB or IGCSE Coaching</option>
-                        <option>Engineering Mathematics</option>
-                        <option>CSE / GATE Guidance</option>
-                        <option>Quantum AI / Research</option>
-                        <option>Legal Consultancy</option>
-                        <option>General Inquiry</option>
-                    </select>
-                </div>
-                <div><label class="block text-sm font-medium mb-1">Message</label><textarea id="wa-message" rows="3" class="w-full border border-slate-300 rounded-2xl px-4 py-3" placeholder="Your goal or question"></textarea></div>
-                <button type="button" onclick="sendToWhatsApp()" class="w-full py-3.5 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-2xl"><i class="fa-brands fa-whatsapp mr-2"></i>Send via WhatsApp</button>
-            </div>
-        </div>
+    <button class="btn btn-gold nav-cta" onclick="showContactModal()">Start a Conversation</button>
+    <button class="menu-btn" onclick="toggleMenu()" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+  </div>
+  <div class="wrap mobile-nav" id="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="ai-solutions.html">AI Solutions</a>
+    <a href="quantum-ai.html">Quantum AI</a>
+    <a href="education.html">Education</a>
+    <a href="research.html">Research</a>
+    <a href="insights.html">Insights</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <button class="btn btn-gold" onclick="showContactModal()">Start a Conversation</button>
+  </div>
+</header>
+<section class="hero">
+  <div class="wrap">
+    <p class="kicker">AlgoLex · Chennai</p>
+    <h1 class="font-serif">AI. Quantum Intelligence. Education.</h1>
+    <p class="lede">Building intelligent solutions at the intersection of Artificial Intelligence, Quantum Computing, Education and Research.</p>
+    <div class="cta-row">
+      <a class="btn btn-gold" href="ai-solutions.html">Explore AI Solutions</a>
+      <a class="btn btn-ghost" href="research.html">Research & Innovation</a>
     </div>
-    <script>
-        const mobileBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        if (mobileBtn) mobileBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-        function showContactModal() { const m = document.getElementById('contact-modal'); m.classList.remove('hidden'); m.classList.add('flex'); }
-        function hideContactModal() { const m = document.getElementById('contact-modal'); m.classList.add('hidden'); m.classList.remove('flex'); }
-        function sendToWhatsApp() {
-            const name = document.getElementById('wa-name').value.trim();
-            const email = document.getElementById('wa-email').value.trim();
-            const interest = document.getElementById('wa-interest').value;
-            const message = document.getElementById('wa-message').value.trim();
-            if (!name || !message) { alert('Please enter your name and message'); return; }
-            let text = 'Hello AlgoLex,%0A%0AName: ' + encodeURIComponent(name) + '%0A';
-            if (email) text += 'Email: ' + encodeURIComponent(email) + '%0A';
-            text += 'Interested in: ' + encodeURIComponent(interest) + '%0AMessage: ' + encodeURIComponent(message);
-            window.open('https://wa.me/918072940943?text=' + text, '_blank');
-            hideContactModal();
-        }
-        document.getElementById('contact-modal').addEventListener('click', function(e) { if (e.target.id === 'contact-modal') hideContactModal(); });
-    </script>
+  </div>
+</section>
+<section class="section section-alt">
+  <div class="wrap">
+    <p class="kicker">What is AlgoLex?</p>
+    <h2 class="font-serif">An innovation desk for applied intelligence.</h2>
+    <p class="lede">AlgoLex is a Chennai-based studio led by Prof. Mukesh Kumar. The work sits across AI systems, Quantum AI research in progress, education programmes, and legal counsel for technology teams.</p>
+    <div class="grid-3" style="margin-top:28px">
+      <div class="card"><div class="icon"><i class="fa-solid fa-microchip"></i></div><h3>AI innovation</h3><p class="muted">Agents, automation and custom systems designed around a real workflow.</p></div>
+      <div class="card"><div class="icon"><i class="fa-solid fa-atom"></i></div><h3>Quantum intelligence</h3><p class="muted">Quantum Machine Learning and hybrid methods, studied as a working PhD research programme.</p></div>
+      <div class="card"><div class="icon"><i class="fa-solid fa-graduation-cap"></i></div><h3>Education & research</h3><p class="muted">Teaching, mentoring and applied research from a Computer Science classroom at SMIT.</p></div>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="wrap">
+    <p class="kicker">AI Solutions</p>
+    <h2 class="font-serif">Build smarter with AI.</h2>
+    <div class="grid-3" style="margin-top:28px">
+      <div class="card"><div class="icon"><i class="fa-solid fa-robot"></i></div><h3>AI Agents</h3><p class="muted">Task-specific agents for research, documents, teaching support and operations.</p></div>
+      <div class="card"><div class="icon"><i class="fa-solid fa-gears"></i></div><h3>Automation</h3><p class="muted">Workflow automation that connects the tools a team already uses.</p></div>
+      <div class="card"><div class="icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div><h3>Generative AI</h3><p class="muted">Content and knowledge workflows with a human approval step.</p></div>
+      <div class="card"><div class="icon"><i class="fa-solid fa-chalkboard-user"></i></div><h3>AI for education</h3><p class="muted">Practice, doubt support and course design for JEE, GATE, CSE and faculty training.</p></div>
+      <div class="card"><div class="icon"><i class="fa-solid fa-scale-balanced"></i></div><h3>AI + legal</h3><p class="muted">Contracts, IP and compliance conversations for technology teams.</p></div>
+      <div class="card"><div class="icon"><i class="fa-solid fa-layer-group"></i></div><h3>Custom systems</h3><p class="muted">Scoped builds when a generic chatbot is not the product.</p></div>
+    </div>
+    <div class="cta-row"><a class="btn btn-gold" href="ai-solutions.html">Explore AI Solutions</a></div>
+  </div>
+</section>
+<section class="section section-alt">
+  <div class="wrap">
+    <p class="kicker">AI Agents</p>
+    <h2 class="font-serif">AI agents that work for you.</h2>
+    <p class="lede">AlgoLex designs agents that can research, draft, process documents, assist educators and move a workflow from input to output. Live products are scoped per engagement.</p>
+    <div class="flow">
+      <span>Input</span><span class="arrow">→</span>
+      <span>AI Agent</span><span class="arrow">→</span>
+      <span>Decision</span><span class="arrow">→</span>
+      <span>Automation</span><span class="arrow">→</span>
+      <span>Output</span>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="wrap">
+    <p class="kicker">Quantum AI</p>
+    <h2 class="font-serif">Exploring the future of intelligence.</h2>
+    <p class="lede">Research in progress on Quantum Machine Learning, quantum algorithms and hybrid methods. This is a working PhD programme, not a completed publications list.</p>
+    <div class="cta-row"><a class="btn btn-gold" href="quantum-ai.html">Explore Quantum AI</a></div>
+  </div>
+</section>
+<section class="section section-alt">
+  <div class="wrap">
+    <p class="kicker">Education</p>
+    <h2 class="font-serif">Technology that transforms learning.</h2>
+    <div class="grid-3" style="margin-top:28px">
+      <div class="card"><h3>JEE / NEET / boards</h3><p class="muted">Physics, mathematics and chemistry with small-batch mentoring.</p></div>
+      <div class="card"><h3>Computer Science</h3><p class="muted">GATE CSE, university papers, DSA and core subjects.</p></div>
+      <div class="card"><h3>AI & Quantum literacy</h3><p class="muted">Intro programmes for students, faculty and professionals.</p></div>
+    </div>
+    <div class="cta-row"><a class="btn btn-ghost" href="education.html">View education</a></div>
+  </div>
+</section>
+<section class="section">
+  <div class="wrap">
+    <p class="kicker">Research</p>
+    <h2 class="font-serif">Research today. Intelligence tomorrow.</h2>
+    <p class="lede">Active research interest: Quantum AI. Publications will be listed when they can be cited — nothing is invented here.</p>
+    <div class="cta-row"><a class="btn btn-gold" href="research.html">View Research</a></div>
+  </div>
+</section>
+<section class="section section-alt">
+  <div class="wrap founder">
+    <img src="founder-studio.png" alt="Prof. Mukesh Kumar, founder of AlgoLex Solutions">
+    <div>
+      <p class="kicker">Founder</p>
+      <h2 class="font-serif">Prof. Mukesh Kumar</h2>
+      <p class="muted">Founder, AlgoLex Solutions · Professor of Computer Science, SMIT, Chennai</p>
+      <p>B.Tech, M.Tech, LLB. PhD (pursuing) Quantum AI. 15 years in computer science and AI education.</p>
+      <div class="chips">
+        <span class="chip">B.Tech</span><span class="chip">M.Tech</span><span class="chip">LLB</span>
+        <span class="chip">PhD (pursuing) Quantum AI</span><span class="chip">15 years</span>
+      </div>
+      <div class="cta-row"><a class="btn btn-gold" href="about.html">About the Founder</a></div>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="wrap">
+    <p class="kicker">Why AlgoLex</p>
+    <div class="grid-4" style="margin-top:24px">
+      <div class="card"><h3>Research driven</h3><p class="muted">Work grounded in emerging AI and quantum methods.</p></div>
+      <div class="card"><h3>Practical innovation</h3><p class="muted">Advanced ideas turned into scoped, usable systems.</p></div>
+      <div class="card"><h3>Education focused</h3><p class="muted">Technology applied to real learning environments.</p></div>
+      <div class="card"><h3>Human + AI</h3><p class="muted">Systems that augment a teacher, researcher or founder.</p></div>
+    </div>
+  </div>
+</section>
+<section class="section section-alt">
+  <div class="wrap">
+    <p class="kicker">Insights</p>
+    <h2 class="font-serif">Notes from the desk.</h2>
+    <div class="grid-3" style="margin-top:28px">
+      <a class="card" href="insights.html#qml" style="text-decoration:none"><p class="gold">Quantum</p><h3>What is Quantum ML?</h3></a>
+      <a class="card" href="insights.html#agents" style="text-decoration:none"><p class="gold">AI</p><h3>What an AI agent can do</h3></a>
+      <a class="card" href="insights.html#teach" style="text-decoration:none"><p class="gold">Education</p><h3>Teaching with AI tools</h3></a>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="wrap">
+    <h2 class="font-serif">Have an AI idea? Let’s build it.</h2>
+    <p class="lede">Tell us what you want to automate, improve or research.</p>
+    <div class="cta-row">
+      <button class="btn btn-gold" onclick="showContactModal()">Start a Conversation</button>
+      <a class="btn btn-ghost" href="contact.html">Collaborate With Us</a>
+    </div>
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="wrap foot-grid">
+    <div>
+      <div class="brand" style="margin-bottom:10px"><img src="logo.svg" alt=""> AlgoLex Solutions</div>
+      <p>AI. Quantum Intelligence. Education.<br>Chennai, India</p>
+    </div>
+    <div>
+      <a href="ai-solutions.html">AI Solutions</a>
+      <a href="quantum-ai.html">Quantum AI</a>
+      <a href="education.html">Education</a>
+      <a href="research.html">Research</a>
+    </div>
+    <div>
+      <a href="mailto:kmukesh1@gmail.com">kmukesh1@gmail.com</a>
+      <a href="tel:+918072940943">+91 80729 40943</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About the founder</a>
+    </div>
+  </div>
+  <div class="wrap">© 2026 AlgoLex Solutions</div>
+</footer>
+<div id="contact-modal" class="modal">
+  <div class="modal-card">
+    <div style="display:flex;justify-content:space-between;align-items:start">
+      <div>
+        <h3 class="font-serif" style="font-size:28px">Start a conversation</h3>
+        <p class="muted" style="margin:6px 0 0">Opens WhatsApp with your message.</p>
+      </div>
+      <button class="btn btn-ghost" onclick="hideContactModal()" aria-label="Close">×</button>
+    </div>
+    <label for="wa-name">Name</label>
+    <input id="wa-name" placeholder="Your name">
+    <label for="wa-email">Email</label>
+    <input id="wa-email" type="email" placeholder="you@example.com">
+    <label for="wa-org">Organization (optional)</label>
+    <input id="wa-org" placeholder="College, lab, or company">
+    <label for="wa-interest">Area of interest</label>
+    <select id="wa-interest">
+      <option>AI Solutions</option>
+      <option>AI Agents / Automation</option>
+      <option>Quantum AI / Research</option>
+      <option>Education</option>
+      <option>Legal Consultancy</option>
+      <option>Collaboration</option>
+      <option>General Inquiry</option>
+    </select>
+    <label for="wa-message">Message</label>
+    <textarea id="wa-message" rows="3" placeholder="What do you want to build, learn, or research?"></textarea>
+    <button class="btn btn-wa" style="width:100%;margin-top:16px" onclick="sendToWhatsApp()"><i class="fa-brands fa-whatsapp"></i> Send via WhatsApp</button>
+  </div>
+</div>
+<script src="site.js"></script>
 </body>
 </html>
