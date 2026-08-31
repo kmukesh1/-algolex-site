@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://www.algolex.in/</loc><lastmod>2026-08-31</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://www.algolex.in/ai-solutions.html</loc><lastmod>2026-08-31</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.algolex.in/quantum-ai.html</loc><lastmod>2026-08-31</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.algolex.in/education.html</loc><lastmod>2026-08-31</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.algolex.in/research.html</loc><lastmod>2026-08-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.algolex.in/insights.html</loc><lastmod>2026-08-31</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.algolex.in/about.html</loc><lastmod>2026-08-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.algolex.in/contact.html</loc><lastmod>2026-08-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.algolex.in/services.html</loc><lastmod>2026-08-31</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://www.algolex.in/courses.html</loc><lastmod>2026-08-31</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.algolex.in/ai-solutions.html</loc><lastmod>2026-08-31</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.algolex.in/ai-agents.html</loc><lastmod>2026-08-31</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.algolex.in/ai-automation.html</loc><lastmod>2026-08-31</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.algolex.in/quantum-ai.html</loc><lastmod>2026-08-31</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.algolex.in/quantum-machine-learning.html</loc><lastmod>2026-08-31</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.algolex.in/education.html</loc><lastmod>2026-08-31</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.algolex.in/ai-education.html</loc><lastmod>2026-08-31</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.algolex.in/research.html</loc><lastmod>2026-08-31</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.algolex.in/insights.html</loc><lastmod>2026-08-31</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.algolex.in/what-are-ai-agents.html</loc><lastmod>2026-08-31</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.algolex.in/what-is-quantum-ai.html</loc><lastmod>2026-08-31</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.algolex.in/quantum-machine-learning-explained.html</loc><lastmod>2026-08-31</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.algolex.in/ai-agents-in-education.html</loc><lastmod>2026-08-31</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.algolex.in/about.html</loc><lastmod>2026-08-31</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.algolex.in/contact.html</loc><lastmod>2026-08-31</lastmod><priority>0.7</priority></url>
 </urlset>
