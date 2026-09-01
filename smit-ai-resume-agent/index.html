@@ -9,8 +9,164 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg:#f3f6fb; --surface:#fff; --muted-bg:#f8fafc; --fg:#0f172a; --muted:#64748b;
+      --primary:#1d4ed8; --primary-hover:#1e40af; --soft:#eff4ff; --navy:#132a4a; --navy-fg:#f8fafc;
+      --success:#0f766e; --success-soft:#ecfdf5; --border:#e2e8f0; --chip:#eef2ff;
+      --shadow:0 1px 2px rgb(15 23 42 / .04), 0 8px 24px rgb(15 23 42 / .05);
+    }
+    * { box-sizing: border-box; }
+    html, body { margin:0; background:var(--bg); color:var(--fg); font-family:"IBM Plex Sans",system-ui,sans-serif; }
+    button { cursor:pointer; font-family:inherit; }
+    a { color:var(--primary); }
+    header.top { background:var(--surface); border-bottom:1px solid var(--border); }
+    .wrap { max-width:1320px; margin:0 auto; padding:16px 20px; }
+    .top-inner { display:flex; gap:16px; justify-content:space-between; align-items:center; flex-wrap:wrap; }
+    .brand { display:flex; gap:12px; align-items:flex-start; }
+    .logo { width:40px; height:40px; border-radius:8px; background:var(--primary); color:#fff; display:grid; place-items:center; font-weight:700; }
+    h1 { margin:0; font-size:22px; color:var(--primary); }
+    .sub { margin:2px 0 0; font-size:13px; color:var(--muted); }
+    .chips { display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
+    .chip { height:40px; display:inline-flex; align-items:center; padding:0 12px; border-radius:999px; font-size:12px; font-weight:600; border:0; }
+    .chip.green { background:var(--success-soft); color:var(--success); }
+    .chip.navy { background:var(--navy); color:var(--navy-fg); }
+    .chip.outline { background:#fff; border:1px solid #cbd5e1; color:var(--fg); }
+    main { max-width:1320px; margin:0 auto; padding:16px 20px 40px; display:grid; gap:20px; }
+    @media (min-width:980px) { main { grid-template-columns:1fr 1.05fr; align-items:start; } }
+    .card { background:var(--surface); border:1px solid var(--border); border-radius:22px; padding:22px; box-shadow:var(--shadow); }
+    h2 { margin:0; font-size:20px; }
+    .lead { color:var(--muted); font-size:14px; line-height:1.55; }
+    .label { font-size:11px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); margin:18px 0 8px; }
+    .row { display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+    .pill { height:40px; border-radius:999px; border:1px solid var(--border); background:#fff; padding:0 12px; font-size:12px; font-weight:500; }
+    .pill.on { border-color:var(--primary); background:var(--soft); color:var(--primary); }
+    .grid2 { display:grid; gap:10px; }
+    @media (min-width:640px) { .grid2 { grid-template-columns:1fr 1fr; } }
+    input, textarea { width:100%; border:1px solid var(--border); border-radius:8px; padding:10px 12px; font:14px/1.4 inherit; color:var(--fg); background:#fff; }
+    input:focus, textarea:focus { outline:2px solid color-mix(in srgb, var(--primary) 25%, transparent); border-color:var(--primary); }
+    textarea { min-height:76px; resize:vertical; }
+    .hp { font-size:10px; font-weight:700; color:var(--primary); background:var(--chip); border-radius:999px; padding:3px 8px; }
+    .btn { height:40px; border:0; border-radius:8px; padding:0 14px; font-weight:600; font-size:13px; }
+    .btn-primary { background:var(--primary); color:#fff; }
+    .btn-outline { background:#fff; border:1px solid #cbd5e1; width:100%; }
+    .proj { border:1px solid var(--border); border-radius:10px; padding:12px; background:var(--muted-bg); margin-bottom:10px; }
+    .preview-head { display:flex; justify-content:space-between; gap:8px; flex-wrap:wrap; align-items:center; margin-bottom:10px; }
+    .live { display:flex; align-items:center; gap:8px; font-size:12px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); }
+    .dot { width:8px; height:8px; border-radius:99px; background:var(--primary); }
+    #sheet { min-height:560px; border:1px dashed #cbd5e1; border-radius:18px; background:#fff; padding:28px 32px; box-shadow:var(--shadow); }
+    .empty { min-height:480px; display:grid; place-items:center; text-align:center; color:var(--muted); }
+    .resume h2.name { text-align:center; letter-spacing:.04em; font-size:22px; margin:0; }
+    .role { text-align:center; color:var(--primary); font-size:13px; font-weight:600; margin:4px 0; }
+    .contacts { text-align:center; font-size:12px; color:#334155; }
+    .sec { margin-top:14px; }
+    .sec h3 { font-size:11px; letter-spacing:.12em; text-transform:uppercase; border-bottom:1px solid #0f172a; padding-bottom:3px; margin:0 0 8px; }
+    .sec p, .sec li { font-size:12.5px; line-height:1.4; margin:0; }
+    .sec ul { margin:4px 0 0 18px; padding:0; }
+    .side { display:grid; gap:12px; margin-top:14px; }
+    @media (min-width:720px) { .side.two { grid-template-columns:1fr 1fr; } }
+    .navy-card { background:var(--navy); color:var(--navy-fg); border-radius:18px; padding:20px; }
+    .ok { color:var(--success); }
+    .modal { position:fixed; inset:0; background:rgb(15 23 42 / .4); display:none; place-items:center; padding:16px; z-index:20; }
+    .modal.on { display:grid; }
+    .modal .box { background:#fff; max-width:520px; width:100%; border-radius:16px; padding:22px; }
+    @media print {
+      body * { visibility:hidden; }
+      #sheet, #sheet * { visibility:visible; }
+      #sheet { position:absolute; left:0; top:0; width:100%; border:0; box-shadow:none; }
+      .no-print { display:none !important; }
+    }
+  </style>
 </head>
 <body>
-<!-- full file follows from local patched copy -->
+  <header class="top no-print">
+    <div class="wrap top-inner">
+      <div class="brand">
+        <div class="logo">R</div>
+        <div>
+          <h1>AI Resume Agent</h1>
+          <p class="sub">Created by <strong>Asst. Prof. Mukesh Kumar</strong> · CSE Department, SMIT</p>
+        </div>
+      </div>
+      <div class="chips">
+        <button class="chip outline" type="button" id="btnGuide">How to Use / Student Guide</button>
+        <span class="chip green">ATS 1-Page</span>
+        <span class="chip navy">SMIT CSE</span>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="card no-print">
+      <h2>Welcome Student</h2>
+      <p class="lead">Welcome to AI Resume Agent — created by <strong>Asst. Prof. Mukesh Kumar</strong> for SMIT students. Enter your details below to build your career.</p>
+      <div class="label">Quick Track Templates</div>
+      <div class="row">
+        <button class="pill" type="button" data-track="sde">SDE / Full Stack</button>
+        <button class="pill" type="button" data-track="ai">AI & Data Science</button>
+        <button class="pill" type="button" data-track="cloud">Cloud / DevOps</button>
+        <button class="pill" type="button" id="btnClear">Clear</button>
+      </div>
+      <div class="label">1. Personal & Contact Info</div>
+      <div class="grid2">
+        <input id="fullName" placeholder="Full Name (e.g. Rohan Sengupta) *" />
+        <input id="targetRole" placeholder="Target Role (e.g. SDE Intern) *" />
+        <input id="email" placeholder="Email" />
+        <input id="phone" placeholder="Phone" />
+        <input id="linkedin" placeholder="LinkedIn URL" />
+        <input id="github" placeholder="GitHub URL" />
+        <input id="leetcode" placeholder="LeetCode URL" />
+        <input id="location" placeholder="Location" />
+      </div>
+      <div class="label">2. Education & CGPA</div>
+      <textarea id="education"></textarea>
+      <div class="label" style="display:flex;justify-content:space-between;align-items:center;">
+        3. Technical Skills * <span class="hp">HIGH PRIORITY</span>
+      </div>
+      <textarea id="skills" placeholder="Languages: ...&#10;Frameworks: ...&#10;Tools: ..."></textarea>
+      <div class="label">4. Projects (projects first)</div>
+      <div id="projects"></div>
+      <div class="label">5. Experience / Internships</div>
+      <div id="experience"></div>
+      <div class="label">6. Achievements & certifications</div>
+      <textarea id="achievements" placeholder="Hackathons, NPTEL, AWS — one per line"></textarea>
+      <div class="label">7. Additional notes</div>
+      <textarea id="extra"></textarea>
+      <div style="margin-top:16px">
+        <button class="btn btn-outline" type="button" id="btnSample">Load Sample Profile</button>
+      </div>
+    </section>
+    <section>
+      <div class="preview-head no-print">
+        <div class="live"><span class="dot"></span> Live ATS Resume Preview</div>
+        <button class="btn btn-primary" type="button" id="btnPrint">Print 1-Page PDF</button>
+      </div>
+      <article id="sheet"></article>
+      <div class="side two no-print">
+        <div class="card" style="border-radius:18px;padding:20px">
+          <strong>Placement ATS Standards</strong>
+          <p class="lead ok">Zero Hallucination: Uses only verified student input.</p>
+          <p class="lead ok">STAR Bullets: Action Verb + Task + Impact.</p>
+          <p class="lead ok">Projects First: Prioritizes tech builds for placements.</p>
+        </div>
+        <div class="navy-card">
+          <strong>Asst. Prof. Mukesh Kumar's Advice</strong>
+          <p style="line-height:1.55;font-size:14px">“Always align your top technical projects directly with the target job role and state your tech stack explicitly for campus placement drives.”</p>
+          <p style="opacity:.75;font-size:12px;border-top:1px solid rgb(255 255 255 / .15);padding-top:10px">Department of CSE, SMIT</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id="guide" class="modal no-print">
+    <div class="box">
+      <h2>Student Guide</h2>
+      <p class="lead">This agent builds a one-page ATS resume from your own facts. It will not invent internships or tools.</p>
+      <p class="lead"><strong>1.</strong> Pick a track so skills match the drive.</p>
+      <p class="lead"><strong>2.</strong> Projects first — three strong builds beat six weak ones.</p>
+      <p class="lead"><strong>3.</strong> STAR bullets: verb + task + impact.</p>
+      <p class="lead"><strong>4.</strong> Print → Save as PDF, keep it to one A4 page.</p>
+      <button class="btn btn-primary" type="button" id="btnGuideClose">Got it</button>
+    </div>
+  </div>
+  <script src="app.js"></script>
 </body>
 </html>
